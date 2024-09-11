@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta rel="image_src" href="https://i.ibb.co/8ccR0pQ/it-me-11zon.jpg"/>
+  <link rel="shortcut icon" type="image/png" href="logo.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>AI Gender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrpper">
+      <img src="bard.gif" alt="" />
+      <p>AI Gender</p>
+    </div>
+    <div class="wrpper right">
+      <i id="apps" onclick="openApps()" class="material-icons">apps</i>
+      <img id="me" onclick="showme()" src="me.png" alt="" />
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div data-aos="fade-up id=" start_text" class="ai">
+        <img id="loader_img" src="bard.gif" />
+        <p class="content">
+          I’m Ranjan, your creative and helpful collaborator. I have limitations
+          and won’t always get it right, but your feedback will help me
+          improve.
+        </p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="500" id="start_text" class="ai">
+        <img id="loader_img" src="bard.gif" />
+        <p class="content">I can predict your gender by your name</p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="900" id="start_text" class="ai">
+        <img id="loader_img" src="bard.gif" />
+        <p class="content">मै आपके नाम के द्वारा आपका लिंग बता सकता हूँ </p>
+      </div>
+
+    </section>
+
+    <footer>
+      <div class="inputs">
+        <div class="input_box">
+          <input autocomplete="off" id="input" required type="text" placeholder="Enter first name" />
+          <i id="mic" class="material-icons">mic</i>
+        </div>
+        <button onclick="sendName()" disabled id="send_btn">
+          <i id="send" class="material-icons">send</i>
+        </button>
+      </div>
+
+    </footer>
+  </main>
+  <dialog class="dialog">
+    <img src="me.png" alt="">
+    <div class="content1">
+      <h3>Ranjan Kashyap</h3>
+      <p>Hello, this is ranjan kashyap passionate about programming making the world better place with code</p>
+      <h4>Contact us</h4>
+    </div>
+    <div class="social-links">
+      <ul>
+        <li>
+          <a href="https://m.facebook.com/profile.php?id=100089545242472" class="fa fa-facebook"></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/webdev_ranjan" class="fa fa-instagram"></a>
+        </li>
+        <li>
+          <a href="https://wa.me/message/Y3EAY3AP5UVJF1" class="fa fa-whatsapp" class="fa fa-whatsapp"></a>
+        </li>
+        <li>
+          <a href="mailto:ranjankashyap404@gmail.com" class="fa fa-envelope"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="closebutton">
+      <button onclick="closeme()">Close</button>
+    </div>
+  </dialog>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

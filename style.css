@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  transition: .4s;
+}
+
+:root {
+  --primaryBlue: #f3f6fc;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header img {
+  width: 40px;
+}
+
+header .wrpper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+header .wrpper.right {
+  gap: 20px;
+}
+
+header .wrpper.right img {
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+header p {
+  font-size: 18px;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  height: 120px;
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: var(--primaryBlue);
+  padding: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer .policy {
+  width: 90%;
+  text-align: center;
+  margin: 5px auto;
+}
+
+footer .inputs {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+footer .inputs .input_box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 28px;
+  padding-right: 10px;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+footer .inputs .input_box #mic {
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer .inputs .input_box #mic:hover {
+  background-color: var(--primaryBlue);
+}
+
+footer .inputs input {
+  width: 95%;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 17px;
+}
+
+footer .inputs #send {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+footer .inputs #send:hover {
+  background-color: #d8e0ff;
+}
+
+footer .inputs #send_btn {
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+main {
+  position: fixed;
+  width: 90%;
+  /* height: calc(100vh - 63px); */
+  height: 90vh;
+  top: 63px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  overflow-x: hidden;
+  background-color: var(--primaryBlue);
+}
+
+main .section {
+  width: 100%;
+  height: 70vh;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 20px;
+  overflow-y: auto;
+  border-top: 5px solid var(--primaryBlue);
+}
+
+main .ai {
+  width: 95%;
+  border-radius: 15px;
+  margin: 10px auto;
+  background-color: white;
+  padding: 20px 15px;
+  display: grid;
+  grid-template-columns: 50px 80%;
+}
+
+main .ai .content {
+  overflow-x: auto;
+}
+
+main .ai img {
+  width: 30px;
+  background-color: transparent;
+}
+
+@media (width <=700px) {
+  main {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+}
+
+#me,
+#apps {
+  cursor: pointer;
+}
+
+dialog {
+  border: none;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  outline: none;
+
+}
+
+
+dialog::backdrop {
+  background-color: #0000006b;
+}
+
+.dialog img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dialog .content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.social-links ul li {
+  list-style: none;
+}
+
+.social-links ul li a {
+  text-decoration: none;
+  background-color: #ebeeff;
+  width: 40px;
+  height: 40px;
+  color: blue;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.dialog .closebutton {
+  margin-top: 20px;
+
+  text-align: end;
+}
+
+.dialog .closebutton button {
+  padding: 8px 13px;
+  border: none;
+  background-color: #e5eaff;
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+@media(prefers-color-scheme: dark) {
+  :root {
+    --primaryBlue: #222327;
+  }
+
+  body {
+    color: #ebebff;
+    background-color: #27282b;
+  }
+
+  header {
+    background-color: black;
+  }
+
+  main .ai {
+    background-color: #131314;
+  }
+
+  footer input {
+    background-color: black;
+    color: white;
+  }
+
+  footer #mic {
+    background-color: black;
+  }
+
+
+  footer .inputs .input_box {
+    background-color: black;
+  }
+
+  #send_btn:disabled {
+    opacity: .4;
+  }
+
+  footer #send_btn {
+    color: white;
+  }
+
+  footer .inputs #send:hover {
+    background-color: black;
+  }
+}
